@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a>Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+        </a>
+        <button class="toggle-hamburger">
+          <span>menu toggle</span>
+        </button>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h2 class="page-main__title">Оставьте свой отзыв</h2>
+      <p class="page-main__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечтаельностях</p>
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="filter__item">
+          <legend class="filter__legend">Представьтесь:</legend>
+          <label class="filter__label" for="name">Имя*:</label>
+          <input class="filter__input" id="name" type="text" name="name" value="" placeholder="Петр">
+          <label class="filter__label" for="surname">Фамилия*:</label>
+          <input class="filter__input" id="surname" type="text" name="name" value="" placeholder="Иванов">
+          <label class="filter__label" for="patronymic">Отчество:</label>
+          <input class="filter__input" id="patronymic" type="text" name="name" value="" placeholder="Александрович">
+        </fieldset>
+        <fieldset class="filter__item">
+          <legend class="filter__legend">Контактная информация:</legend>
+          <label class="filter__label" for="phone">Контактный телефон*:</label>
+          <input class="filter__input" id="phone" type="text" name="phone-number" value="" placeholder="Введите телефон">
+          <label class="filter__label" for="email">Электронная почта*:</label>
+          <input class="filter__input" id="email" type="text" name="email-adress" value="" placeholder="Введите e-mail">
+        </fieldset>
+        <fieldset class="filter__item">
+          <legend class="filter__legend">Ваше общее впечатление:</legend>
+          <ul class="filter-list">
+            <li class="filter-list__option">
+              <input class="filter-list__radio" type="radio" name="grade" id="good" checked>
+              <label class="filter-list__label" for="good">Скорее положительное</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-list__radio" type="radio" name="grade" id="bad">
+              <label class="filter-list__label" for="bad">Скорее отрицательное</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-list__radio" type="radio" name="grade" id="no-idea">
+              <label class="filter-list__label" for="no-idea">Затрудняюсь ответить</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-item">
+          <legend class="filter__legend">Посещенные достопримечательности:</legend>
+          <ul class="filter-list">
+            <li class="filter-option">
+              <input class="filter-list__checkbox" type="checkbox" name="bridge" id="filter-bridge" checked>
+              <label class="filter-list__label" for="filter-bridge">Мост Дьявола</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-list__checkbox" type="checkbox" name="hill" id="filter-hill" checked>
+              <label class="filter-list__label" for="filter-hill">Гора Колокол</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-list__checkbox" type="checkbox" name="park" id="filter-park" checked>
+              <label class="filter-list__label" for="filter-park">Слайд-парк</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-list__checkbox" type="checkbox" name="cliff" id="filter-cliff">
+              <label class="filter-list__label" for="filter-cliff">Красные скалы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-item">
+          <label class="filter-item__label" for="text">Опишите свои эмоции:</label>
+          <textarea rows="6" cols="61" id="text" placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+        <input type="submit" class="filter__button" value="Отправить отзыв">
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="hashtag">#Visitsedona</div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"></a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
+      </div>
+    </footer>
+    <section class="user-notification">
+      <h2 class="user-notification__title">Что-то пошло не так!</h2>
+      <p class="user-notification__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <a class="user-notification__button" href="#">Ок</a>
+    </section>
+    <section class="user-notification">
+      <h2 class="user-notification__title">Ваш отзыв отправлен!</h2>
+      <p class="user-notification__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <a class="user-notification__button" href="#">Закрыть окно</a>
+    </section>
+  </body>
+</html>
