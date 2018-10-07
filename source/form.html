@@ -26,15 +26,15 @@
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
         </a>
-        <button class="toggle-hamburger">
+        <button type="button" class="toggle-hamburger">
           <span>menu toggle</span>
         </button>
       </nav>
     </header>
     <main class="page-main">
-      <h2 class="page-main__title">Оставьте свой отзыв</h2>
+      <h1 class="page-main__title">Оставьте свой отзыв</h1>
       <p class="page-main__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечтаельностях</p>
-      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+      <form class="filter" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="filter__item">
           <legend class="filter__legend">Представьтесь:</legend>
           <label class="filter__label" for="name">Имя*:</label>
@@ -47,9 +47,9 @@
         <fieldset class="filter__item">
           <legend class="filter__legend">Контактная информация:</legend>
           <label class="filter__label" for="phone">Контактный телефон*:</label>
-          <input class="filter__input" id="phone" type="text" name="phone-number" value="" placeholder="Введите телефон">
+          <input class="filter__input" id="phone" type="tel" name="phone-number" value="" placeholder="Введите телефон" required>
           <label class="filter__label" for="email">Электронная почта*:</label>
-          <input class="filter__input" id="email" type="text" name="email-adress" value="" placeholder="Введите e-mail">
+          <input class="filter__input" id="email" type="email" name="email-adress" value="" placeholder="Введите e-mail" required>
         </fieldset>
         <fieldset class="filter__item">
           <legend class="filter__legend">Ваше общее впечатление:</legend>
@@ -93,7 +93,7 @@
           <label class="filter-item__label" for="text">Опишите свои эмоции:</label>
           <textarea rows="6" cols="61" id="text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <input type="submit" class="filter__button" value="Отправить отзыв">
+        <button type="submit" class="filter__button button">Отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
