@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -24,12 +25,15 @@
           </ul>
         </div>
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
         </a>
         <button type="button" class="toggle-hamburger">
           <span>menu toggle</span>
         </button>
       </nav>
+      <div class="background-photo background-photo__mountains">
+        <img class="background-photo__text background-photo__text--sedona" src="img/text-sedona.svg" width="229" height="39" alt="Приветственный текст">
+      </div>
     </header>
     <main class="page-main">
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
@@ -68,7 +72,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-item">
+        <fieldset class="filter__item">
           <legend class="filter__legend">Посещенные достопримечательности:</legend>
           <ul class="filter-list">
             <li class="filter-option">
@@ -89,11 +93,11 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-item">
-          <label class="filter-item__label" for="text">Опишите свои эмоции:</label>
+        <fieldset class="filter__item">
+          <label class="filter__legend filter__legend--label" for="text">Опишите свои эмоции:</label>
           <textarea rows="6" cols="61" id="text" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <button type="submit" class="filter__button button">Отправить отзыв</button>
+        <button type="submit" class="filter__button button button--feedback">Отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
@@ -119,12 +123,12 @@
     <section class="user-notification">
       <h2 class="user-notification__title">Что-то пошло не так!</h2>
       <p class="user-notification__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <a class="user-notification__button" href="#">Ок</a>
+      <a class="user-notification__button button" href="#">Ок</a>
     </section>
     <section class="user-notification">
       <h2 class="user-notification__title">Ваш отзыв отправлен!</h2>
       <p class="user-notification__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <a class="user-notification__button" href="#">Закрыть окно</a>
+      <a class="user-notification__button button" href="#">Закрыть окно</a>
     </section>
   </body>
 </html>
