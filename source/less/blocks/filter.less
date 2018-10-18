@@ -1,3 +1,8 @@
+.filter {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .filter__item {
   border: none;
 }
@@ -6,9 +11,78 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+  text-align: center;
 }
 
 .filter__label {
   line-height: 26px;
   color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+  }
+
+  .filter__item--bio {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+
+  .filter__item--impression {
+    display: flex;
+    flex-direction: column;
+    order: -2;
+    width: 324px;
+  }
+
+  .filter__item--contacts {
+    display: flex;
+    flex-direction: column;
+    width: 648px;
+  }
+
+  .filter__item--visited {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+  }
+
+  .filter__item--text {
+    display: flex;
+    flex-direction: column;
+    width: 648px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    width: 960px;
+  }
+
+  .filter__item--bio {
+    width: 480px;
+  }
+
+  .filter__item--impression {
+    order: -2;
+    width: 400px;
+  }
+
+  .filter__item--contacts {
+    flex-direction: row;
+    width: 960px;
+  }
+
+  .filter__item--visited {
+    flex-direction: row;
+    width: 960px;
+  }
+
+  .filter__item--text {
+    width: 960px;
+  }
 }
