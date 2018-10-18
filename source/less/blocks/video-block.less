@@ -1,4 +1,13 @@
+.video-block {
+  margin: 0 auto;
+  padding: 0;
+  width: 280px;
+}
+
 .video-block__title {
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -7,4 +16,20 @@
 .video-block__description {
   line-height: 24px;
   color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .video-block {
+    width: 648px;
+  }
+
+  .video-block__description {
+    width: 430px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-block {
+    width: 800px;
+  }
 }

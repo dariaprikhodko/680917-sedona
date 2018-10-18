@@ -1,4 +1,22 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.page-header__logo {
+  height: 83px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    order: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    height: 96px;
+  }
 }
