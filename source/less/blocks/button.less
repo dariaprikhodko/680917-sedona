@@ -7,9 +7,34 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #5496bd;
+    color: #94b9d2;
+  }
 }
 
 .button--find,
 .button--feedback {
   font-size: 21px;
+}
+
+.button--find {
+  display: block;
+  width: 280px;
+  margin-bottom: 55px;
+  padding: 15px 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .button--find {
+    width: 458px;
+  }
 }

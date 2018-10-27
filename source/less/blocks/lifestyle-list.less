@@ -1,28 +1,142 @@
 .lifestyle-list {
-  list-style: none;
+  display: block;
   margin: 0;
-  padding: 0;
+  padding-top: 25px;
+  padding-left: 70px;
+  list-style: none;
 }
 
 .lifestyle-list__title {
+  margin: 0;
+  padding-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
 }
 
 .lifestyle-list__description {
+  margin: 0;
+  padding-bottom: 28px;
   color: #333333;
+}
+
+.lifestyle-list__item--housing,
+.lifestyle-list__item--souvenirs,
+.lifestyle-list__item--food {
+  position: relative;
+}
+
+.lifestyle-list__item--food {
+  width: 185px;
+}
+
+.lifestyle-list__icon-house {
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  fill: @light-blue;
+  width: 39px;
+  height: 37px;
+}
+
+.lifestyle-list__icon-gift {
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  fill: @light-blue;
+  width: 32px;
+  height: 38px;
+}
+
+.lifestyle-list__icon-burger {
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  fill: @light-blue;
+  width: 40px;
+  height: 35px;
 }
 
 @media (min-width: @tablet-width) {
   .lifestyle-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
     width: 768px;
+    padding-top: 160px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .lifestyle-list__item {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+  }
+
+  .lifestyle-list__title {
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 21px;
+  }
+
+  .lifestyle-list__description {
+    padding-bottom: 55px;
+    text-align: center;
+  }
+
+  .lifestyle-list__item--souvenirs {
+    order: 1;
+  }
+
+  .lifestyle-list__icon-house {
+    top: -100px;
+    left: 45px;
+    width: 75px;
+    height: 72px;
+  }
+
+  .lifestyle-list__icon-gift {
+    top: -100px;
+    left: 55px;
+    width: 64px;
+    height: 75px;
+  }
+
+  .lifestyle-list__icon-burger {
+    top: -100px;
+    left: 45px;
+    width: 77px;
+    height: 68px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .lifestyle-list {
     width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lifestyle-list__item {
+    width: 400px;
+  }
+
+  .lifestyle-list__description {
+    width: 290px;
+    padding-left: 50px;
+  }
+
+  .lifestyle-list__icon-house {
+    left: 150px;
+  }
+
+  .lifestyle-list__icon-gift {
+    left: 160px;
+  }
+
+  .lifestyle-list__icon-burger {
+    left: 160px;
   }
 }

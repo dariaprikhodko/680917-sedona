@@ -6,17 +6,26 @@
 }
 
 .page-header__logo {
-  height: 83px;
+  position: relative;
+}
+
+.page-header__logo-image {
+  position: absolute;
+  right: 200px;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__logo {
-    order: 2;
+  .page-header__logo-image {
+    right: 400px;
+    top: -40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
+    background-image: url("../img/logo-sedona-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 100%;
     height: 96px;
   }
 }

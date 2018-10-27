@@ -1,4 +1,28 @@
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 45px;
+}
+
 .copyright__text {
+  display: block;
+  margin-right: 12px;
   line-height: 26px;
   font-weight: 400;
+}
+
+.copyright__icon {
+  fill: #000000;
+  width: 27px;
+  height: 34px;
+
+  &:hover {
+    fill: @light-blue;
+  }
+
+  &:focus,
+  &:active {
+    fill: #b2b2b2;
+  }
 }
