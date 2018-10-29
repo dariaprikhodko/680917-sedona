@@ -36,7 +36,13 @@
 }
 
 .advantages-list__item--info {
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 1px solid #d6d6d6;
+}
+
+.advantages-list__item--info:last-child {
+  border-bottom: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -46,6 +52,7 @@
 
   .advantages-list__item {
     width: 255px;
+    border: none;
   }
 
   .advantages-list__item--bridge {

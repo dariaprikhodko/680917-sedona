@@ -20,20 +20,23 @@
     background-color: #669ec0;
   }
 
-  &:focus + svg,
-  &:active + svg {
+  &:focus svg,
+  &:active svg {
     background-color: #5496bd;
     opacity: 0.3;
   }
 }
 
-.social__link:focus svg,
-.social__link:active svg {
-  fill: #88b6d1;
-}
-
 .social__icon {
   fill: #ffffff;
+}
+
+.social__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -42,7 +45,7 @@
   }
 
   .social__list {
-    margin-right: 120px;
+    margin-right: auto;
     align-items: center;
   }
 }
