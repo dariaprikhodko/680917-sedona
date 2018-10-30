@@ -5,6 +5,7 @@
 
 .filter__item {
   margin: 0;
+  margin-bottom: 50px;
   padding: 0;
   border: none;
 
@@ -16,8 +17,13 @@
   }
 }
 
+.filter__showdesktop {
+  visibility: hidden;
+  display: none;
+}
+
 .filter__legend {
-  padding-bottom: 37px;
+  padding-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -35,7 +41,7 @@
   display: block;
   box-sizing: border-box;
   width: 192px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 12px 14px 12px 19px;
   font-size: 18px;
   line-height: 26px;
@@ -47,6 +53,10 @@
 
 .filter__input--name {
   width: 230px;
+}
+
+.filter__input--email {
+  margin-bottom: 0;
 }
 
 .filter__wrapper {
@@ -64,6 +74,11 @@
     margin: 0;
     padding-left: 21px;
     padding-bottom: 5px;
+  }
+
+  .filter__input--phone,
+  .filter__input--message {
+    width: 220px;
   }
 }
 
@@ -103,8 +118,8 @@
 .filter-list__checkbox + label::before {
   content: "";
   position: absolute;
-  left: -60px;
-  top: 10px;
+  left: -70px;
+  top: -15px;
   width: 55px;
   height: 55px;
   border-radius: 2px;
@@ -114,13 +129,121 @@
 .filter-list__checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 2px;
+  left: -50px;
   width: 55px;
   height: 55px;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter__legend--label {
+  display: block;
+  text-align: center;
+}
+
+.filter__textarea {
+  display: block;
+  width: 278px;
+  height: 160px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  resize: none;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.filter-list__radio + label:hover::before,
+.filter-list__checkbox + label:hover::before {
+  background-color: #e5e5e5;
+}
+
+.filter-list__radio + label:active::before,
+.filter-list__checkbox + label:active::before {
+  background-color: #d5d5d5;
+}
+
+.filter-list__checkbox + label:active::after {
+  opacity: 0.3;
+}
+
+.filter-list__radio + label:active::after {
+  background-color: #a4a4a4;
+}
+
+.filter__input:hover {
+  background-color: #e5e5e5;
+}
+
+.filter__input:focus {
+  background-color: #ffffff;
+  box-shadow: inset 4px 4px 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
+  outline: none;
+}
+
+.filter-list__checkbox:focus + label::before,
+.filter-list__radio:focus + label::before {
+  background-color: #d5d5d5;
+}
+
+.filter__textarea:hover {
+  background-color: #e5e5e5;
+}
+
+.filter__textarea:focus {
+  background-color: #ffffff;
+  box-shadow: inset 4px 4px 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
+  outline: none;
+}
+
+.filter__input::-webkit-input-placeholder,
+.filter__textarea::-webkit-input-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__input::-moz-placeholder,
+.filter__textarea::-moz-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__input:-moz-placeholder,
+.filter__textarea:-moz-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__input:-ms-input-placeholder,
+.filter__textarea:-ms-input-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__icon {
+  display: flex;
+  width: 60px;
+  height: 49px;
+  align-self: flex-start;
+  background-color: #e6e6e6;
+}
+
+.filter__svg {
+  display: block;
+  margin: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -130,35 +253,102 @@
     width: 648px;
   }
 
+  .filter__legend {
+    font-size: 21px;
+    text-align: left;
+  }
+
   .filter__item--bio {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 270px;
+
+    .filter__legend {
+      padding-bottom: 75px;
+    }
   }
 
   .filter__item--impression {
     display: flex;
     flex-direction: column;
     order: -2;
-    width: 324px;
+    width: 376px;
+
+    .filter-list {
+      width: 324px;
+      box-sizing: border-box;
+    }
+
+    .filter__legend {
+      padding-bottom: 75px;
+    }
   }
 
   .filter__item--contacts {
-    display: flex;
-    flex-direction: column;
     width: 648px;
+
+    .filter__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .filter__legend {
+      text-align: center;
+    }
+
+    .filter__input {
+      width: 586px;
+    }
   }
 
   .filter__item--visited {
     display: flex;
-    flex-direction: column;
     width: 648px;
+
+    .filter-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 460px;
+      padding-left: 177px;
+      padding-right: 93px;
+    }
+
+    .filter__legend {
+      width: 290px;
+      padding-bottom: 55px;
+      text-align: center;
+    }
+
+    .filter-option {
+      display: block;
+      width: 200px;
+    }
+
+    .filter-option:first-child,
+    .filter-option:nth-child(3n) {
+      margin-right: 50px;
+    }
+
+    .filter-option:first-child,
+    .filter-option:nth-child(2n) {
+      margin-bottom: 25px;
+    }
   }
 
   .filter__item--text {
     display: flex;
     flex-direction: column;
     width: 648px;
+
+    .filter__legend {
+      padding-bottom: 55px;
+      text-align: center;
+    }
+
+    .filter__textarea {
+      width: 648px;
+    }
   }
 }
 
@@ -167,26 +357,92 @@
     width: 960px;
   }
 
+  .filter__showdesktop {
+    visibility: visible;
+    display: block;
+  }
+
+  .filter__hidedesktop {
+    visibility: hidden;
+    display: none;
+  }
+
   .filter__item--bio {
-    width: 480px;
+    width: 400px;
+
+    .filter__input {
+      width: 313px;
+    }
+
+    .filter__input--name {
+      width: 350px;
+    }
   }
 
   .filter__item--impression {
     order: -2;
-    width: 400px;
+    width: 560px;
   }
 
   .filter__item--contacts {
     flex-direction: row;
     width: 960px;
+
+    .filter__input {
+      width: 257px;
+    }
+
+    .filter__legend {
+      padding-bottom: 70px;
+    }
+
+    .filter__label {
+      margin-right: 10px;
+      padding: 0;
+    }
+
+    .filter__input--email {
+      margin-left: 85px;
+    }
   }
 
   .filter__item--visited {
     flex-direction: row;
     width: 960px;
+
+    .filter-list {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      padding-left: 80px;
+    }
+
+    .filter-option {
+      margin: 0;
+      margin-right: 50px;
+    }
+
+    .filter-option:last-child {
+      margin-right: 0;
+    }
+
+    .filter-list__label {
+      margin: 0;
+      width: 150px;
+    }
+
+    .filter-option:first-child,
+    .filter-option:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 
   .filter__item--text {
     width: 960px;
+
+    .filter__textarea {
+      width: 960px;
+    }
   }
 }
