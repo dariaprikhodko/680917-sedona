@@ -1,21 +1,94 @@
 .video-block {
-  margin: 0 auto;
+  position: relative;
+  margin: 0 auto 85px auto;
   padding: 0;
-  width: 280px;
+  width: 320px;
 }
 
 .video-block__title {
-  margin: 0 auto;
-  padding: 0;
-  width: 250px;
+  margin: 0;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  text-align: center;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
 }
 
 .video-block__description {
+  margin: 0 auto 0 auto;
+  padding-bottom: 30px;
+  width: 250px;
   line-height: 24px;
+  text-align: center;
   color: #333333;
+}
+
+.video-block__controls {
+  position: absolute;
+  top: 360px;
+  left: 0;
+  width: 280px;
+  height: 110px;
+}
+
+.video-block__bar {
+  position: relative;
+  padding-top: 22px;
+  padding-left: 20px;
+  height: 45px;
+  box-sizing: border-box;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.video-block__scale {
+  width: 236px;
+  height: 2px;
+  background: gray;
+  opacity: 0.7;
+}
+
+.video-block__toggle--process {
+  position: absolute;
+  top: 16px;
+  left: 60px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-block__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  height: 65px;
+}
+
+.video-block__toggle svg {
+  fill: #5c6870;
+}
+
+.video-block__toggle--replay {
+  margin-right: auto;
+}
+
+.video-block__toggle--fullscreen {
+  margin-left: 28px;
+}
+
+.video-block__toggle:hover svg {
+  fill: #333333;
+}
+
+.video-block__toggle:active svg {
+  fill: #b8b8b8;
 }
 
 @media (min-width: @tablet-width) {
@@ -23,8 +96,22 @@
     width: 648px;
   }
 
+  .video-block__title {
+    font-size: 30px;
+    padding-top: 70px;
+  }
+
   .video-block__description {
     width: 430px;
+    padding-bottom: 75px;
+  }
+
+  .video-block__preview {
+    width: 648px;
+  }
+
+  .video-block__controls {
+    width: 648px;
   }
 }
 
