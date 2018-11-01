@@ -7,9 +7,51 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #5496bd;
+    color: #94b9d2;
+  }
 }
 
 .button--find,
 .button--feedback {
   font-size: 21px;
+}
+
+.button--find,
+.button--feedback,
+.button--ok,
+.button--close {
+  display: block;
+  align-self: center;
+  width: 280px;
+  padding: 15px 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.button--ok {
+  width: 180px;
+}
+
+@media (min-width: @tablet-width) {
+  .button--find {
+    width: 458px;
+  }
+
+  .button--feedback {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--feedback {
+    width: 480px;
+  }
 }

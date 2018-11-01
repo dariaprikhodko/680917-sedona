@@ -4,10 +4,26 @@
 }
 
 .filter__item {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
   border: none;
+
+  .filter-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 75px;
+  }
+}
+
+.filter__showdesktop {
+  visibility: hidden;
+  display: none;
 }
 
 .filter__legend {
+  padding-bottom: 25px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -15,9 +31,175 @@
 }
 
 .filter__label {
+  margin-right: auto;
+  margin-bottom: 15px;
   line-height: 26px;
   color: #333333;
 }
+
+.filter__input {
+  display: block;
+  box-sizing: border-box;
+  width: 192px;
+  margin-bottom: 20px;
+  padding: 12px 14px 12px 19px;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  color: #000000;
+  background: #f2f2f2;
+  border: none;
+}
+
+.filter__input--name {
+  width: 230px;
+}
+
+.filter__input--email {
+  margin-bottom: 0;
+}
+
+.filter__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter__item--contacts {
+  .filter__input {
+    width: 280px;
+  }
+
+  .filter__label {
+    margin: 0;
+    padding-left: 21px;
+    padding-bottom: 5px;
+  }
+
+  .filter__input--phone,
+  .filter__input--message {
+    width: 220px;
+  }
+}
+
+.filter__item--impression {
+  margin-bottom: 23px;
+}
+
+.filter__legend--label {
+  display: block;
+  text-align: center;
+}
+
+.filter__textarea {
+  display: block;
+  width: 278px;
+  height: 160px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  resize: vertical;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.filter__input:hover {
+  background-color: #e5e5e5;
+}
+
+.filter__input:focus {
+  background-color: #ffffff;
+  box-shadow: inset 4px 4px 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
+  outline: none;
+}
+
+.filter__textarea:hover {
+  background-color: #e5e5e5;
+}
+
+.filter__textarea:focus {
+  background-color: #ffffff;
+  box-shadow: inset 4px 4px 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
+  outline: none;
+}
+
+.filter__input::-webkit-input-placeholder,
+.filter__textarea::-webkit-input-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__input::-moz-placeholder,
+.filter__textarea::-moz-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__input:-moz-placeholder,
+.filter__textarea:-moz-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__input:-ms-input-placeholder,
+.filter__textarea:-ms-input-placeholder {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter__wrapper--phone {
+  position: relative;
+}
+
+.filter__wrapper--email {
+  position: relative;
+}
+
+.filter__wrapper--phone::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 220px;
+  width: 58px;
+  height: 58px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #e6e6e6;
+}
+
+.filter__wrapper--email::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 220px;
+  width: 58px;
+  height: 58px;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #e6e6e6;
+}
+
+.filter__item--visited {
+  .filter__legend {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .filter {
@@ -26,35 +208,111 @@
     width: 648px;
   }
 
+  .filter__legend {
+    font-size: 21px;
+    text-align: left;
+  }
+
   .filter__item--bio {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 270px;
+
+    .filter__legend {
+      padding-bottom: 75px;
+    }
+  }
+
+  .filter__wrapper--phone::before,
+  .filter__wrapper--email::before {
+    left: 586px;
   }
 
   .filter__item--impression {
     display: flex;
     flex-direction: column;
     order: -2;
-    width: 324px;
+    width: 376px;
+
+    .filter-list {
+      width: 324px;
+      box-sizing: border-box;
+    }
+
+    .filter__legend {
+      padding-bottom: 75px;
+    }
+
+    .filter-list__label {
+      padding-left: 0;
+    }
   }
 
   .filter__item--contacts {
-    display: flex;
-    flex-direction: column;
     width: 648px;
+
+    .filter__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .filter__legend {
+      text-align: center;
+    }
+
+    .filter__input {
+      width: 586px;
+    }
   }
 
   .filter__item--visited {
     display: flex;
-    flex-direction: column;
     width: 648px;
+
+    .filter-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 460px;
+      padding-left: 177px;
+      padding-right: 93px;
+    }
+
+    .filter__legend {
+      width: 290px;
+      padding-bottom: 55px;
+      text-align: center;
+    }
+
+    .filter-option {
+      display: block;
+      width: 200px;
+    }
+
+    .filter-option:first-child,
+    .filter-option:nth-child(3n) {
+      margin-right: 50px;
+    }
+
+    .filter-option:first-child,
+    .filter-option:nth-child(2n) {
+      margin-bottom: 25px;
+    }
   }
 
   .filter__item--text {
     display: flex;
     flex-direction: column;
     width: 648px;
+
+    .filter__legend {
+      padding-bottom: 55px;
+      text-align: center;
+    }
+
+    .filter__textarea {
+      width: 648px;
+    }
   }
 }
 
@@ -63,26 +321,94 @@
     width: 960px;
   }
 
+  .filter__hidedesktop {
+    display: none;
+  }
+
   .filter__item--bio {
-    width: 480px;
+    width: 400px;
+
+    .filter__input {
+      width: 313px;
+    }
+
+    .filter__input--name {
+      width: 350px;
+    }
+  }
+
+  .filter__wrapper--phone::before {
+    left: 335px;
+  }
+
+  .filter__wrapper--email::before {
+    left: 498px;
   }
 
   .filter__item--impression {
     order: -2;
-    width: 400px;
+    width: 560px;
   }
 
   .filter__item--contacts {
     flex-direction: row;
     width: 960px;
+
+    .filter__input {
+      width: 257px;
+    }
+
+    .filter__legend {
+      padding-bottom: 70px;
+    }
+
+    .filter__label {
+      margin-right: 10px;
+      padding: 0;
+    }
+
+    .filter__input--email {
+      margin-left: 85px;
+    }
   }
 
   .filter__item--visited {
     flex-direction: row;
     width: 960px;
+
+    .filter-list {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      padding-left: 80px;
+    }
+
+    .filter-option {
+      margin: 0;
+      margin-right: 50px;
+    }
+
+    .filter-option:last-child {
+      margin-right: 0;
+    }
+
+    .filter-list__label {
+      margin: 0;
+      width: 150px;
+    }
+
+    .filter-option:first-child,
+    .filter-option:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 
   .filter__item--text {
     width: 960px;
+
+    .filter__textarea {
+      width: 960px;
+    }
   }
 }
