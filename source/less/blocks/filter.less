@@ -123,35 +123,8 @@
   outline: none;
 }
 
-.filter__input::-webkit-input-placeholder,
-.filter__textarea::-webkit-input-placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.filter__input::-moz-placeholder,
-.filter__textarea::-moz-placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.filter__input:-moz-placeholder,
-.filter__textarea:-moz-placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.filter__input:-ms-input-placeholder,
-.filter__textarea:-ms-input-placeholder {
+.filter__input::placeholder,
+.filter__textarea::placeholder {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -161,17 +134,20 @@
 
 .filter__wrapper--phone {
   position: relative;
+  padding-right: 58px;
 }
 
 .filter__wrapper--email {
   position: relative;
+  padding-right: 58px;
 }
 
 .filter__wrapper--phone::before {
   content: "";
   position: absolute;
   display: block;
-  left: 220px;
+  top: 0;
+  right: 0;
   width: 58px;
   height: 58px;
   background-image: url("../img/icon-phone.svg");
@@ -184,7 +160,8 @@
   content: "";
   position: absolute;
   display: block;
-  left: 220px;
+  top: 0;
+  right: 0;
   width: 58px;
   height: 58px;
   background-image: url("../img/icon-mail.svg");
@@ -221,11 +198,6 @@
     .filter__legend {
       padding-bottom: 75px;
     }
-  }
-
-  .filter__wrapper--phone::before,
-  .filter__wrapper--email::before {
-    left: 586px;
   }
 
   .filter__item--impression {
@@ -335,14 +307,6 @@
     .filter__input--name {
       width: 350px;
     }
-  }
-
-  .filter__wrapper--phone::before {
-    left: 335px;
-  }
-
-  .filter__wrapper--email::before {
-    left: 498px;
   }
 
   .filter__item--impression {

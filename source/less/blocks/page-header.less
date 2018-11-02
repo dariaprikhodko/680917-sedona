@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -9,8 +10,18 @@
   position: absolute;
   left: 0;
   right: 0;
+  bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 102px;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-image {
+    width: 188px;
+    height: 96px;
+    background-position: center 0;
+    background-size: cover;
+  }
 }
