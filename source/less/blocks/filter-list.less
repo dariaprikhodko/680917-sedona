@@ -7,9 +7,6 @@
 .filter-list__label {
   display: block;
   position: relative;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-bottom: 40px;
   cursor: pointer;
   font-size: 18px;
   line-height: 26px;
@@ -88,5 +85,17 @@
 @media (min-width: @tablet-width) {
   .filter-list {
     width: 460px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-list__checkbox + label::before {
+    left: 0;
+    top: -10px;
+  }
+
+  .filter-list__checkbox:checked + label::after {
+    left: 0;
+    top: -10px;
   }
 }

@@ -24,25 +24,23 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
 
   .site-list__item {
     box-sizing: border-box;
-
-
-    &:first-child {
-      margin-left: 32px;
-    }
+    width: 20%;
 
     &:nth-child(2) {
-      margin-right: 140px;
+      margin-right: 152px;
     }
   }
 
   .site-list__item a {
-    padding: 12px 21px;
+    padding-top: 14px;
+    padding-bottom: 15px;
     color: #444444;
     background: none;
     border: none;
@@ -75,6 +73,10 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    width: 1045px;
+    width: 100%;
+  }
+
+  .site-list__item:nth-child(2) {
+    margin-right: 240px;
   }
 }
