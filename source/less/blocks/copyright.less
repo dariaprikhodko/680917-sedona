@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 45px;
+  padding-bottom: 15px;
 }
 
 .copyright__text {
@@ -24,5 +25,19 @@
   &:focus,
   &:active {
     fill: #b2b2b2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding: 0;
+  }
+
+  .copyright__text {
+    align-self: center;
+  }
+
+  .copyright__link {
+    align-self: center;
   }
 }

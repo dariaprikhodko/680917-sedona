@@ -1,11 +1,10 @@
 .filter {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
 }
 
 .filter__item {
   margin: 0;
-  margin-bottom: 50px;
   padding: 0;
   border: none;
 
@@ -23,7 +22,9 @@
 }
 
 .filter__legend {
-  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 22px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -32,7 +33,6 @@
 
 .filter__label {
   margin-right: auto;
-  margin-bottom: 15px;
   line-height: 26px;
   color: #333333;
 }
@@ -41,7 +41,7 @@
   display: block;
   box-sizing: border-box;
   width: 192px;
-  margin-bottom: 20px;
+  height: 58px;
   padding: 12px 14px 12px 19px;
   font-size: 18px;
   line-height: 26px;
@@ -49,6 +49,18 @@
   color: #000000;
   background: #f2f2f2;
   border: none;
+}
+
+.filter__line {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.filter__line:last-child {
+  padding-bottom: 0;
 }
 
 .filter__input--name {
@@ -60,14 +72,30 @@
 }
 
 .filter__wrapper {
+  width: 320px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 26px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.filter__wrapper:last-child {
+  padding-bottom: 10px;
 }
 
 .filter__item--contacts {
+  width: 280px;
+  margin: 0 auto;
+
   .filter__input {
     width: 280px;
+  }
+
+  .filter__legend {
+    padding-bottom: 20px;
   }
 
   .filter__label {
@@ -82,8 +110,46 @@
   }
 }
 
+.filter__item--bio {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.filter__wrapper--impression {
+  padding-top: 20px;
+}
+
 .filter__item--impression {
-  margin-bottom: 23px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.filter-option {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.filter__wrapper--visited {
+  padding-bottom: 11px;
+}
+
+.filter__item--visited {
+  width: 280px;
+  margin: 0 auto;
+
+  .filter-option {
+    padding-bottom: 30px;
+    padding-top: 25px;
+  }
+
+  .filter__legend {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filter-option:first-child {
+    padding-top: 10px;
+  }
 }
 
 .filter__legend--label {
@@ -91,16 +157,49 @@
   text-align: center;
 }
 
-.filter__textarea {
+.filter__wrapper-phone {
+  position: relative;
+  padding-right: 58px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.filter__wrapper-email {
+  position: relative;
+  padding-right: 58px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter__wrapper-phone::before {
+  content: "";
+  position: absolute;
   display: block;
-  width: 278px;
-  height: 160px;
-  padding-left: 20px;
-  box-sizing: border-box;
-  padding-top: 15px;
-  resize: vertical;
-  background-color: #f2f2f2;
-  border: none;
+  top: 31px;
+  right: 2px;
+  width: 58px;
+  height: 58px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #e6e6e6;
+}
+
+.filter__wrapper-email::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 31px;
+  right: 2px;
+  width: 58px;
+  height: 58px;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #e6e6e6;
 }
 
 .filter__input:hover {
@@ -113,93 +212,51 @@
   outline: none;
 }
 
-.filter__textarea:hover {
-  background-color: #e5e5e5;
+.filter__wrapper--text {
+  width: 320px;
+  display: flex;
 }
 
-.filter__textarea:focus {
-  background-color: #ffffff;
-  box-shadow: inset 4px 4px 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
-  outline: none;
-}
-
-.filter__input::-webkit-input-placeholder,
-.filter__textarea::-webkit-input-placeholder {
+.filter__input::placeholder,
+.filter__textarea::placeholder {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+  opacity: 1;
 }
 
-.filter__input::-moz-placeholder,
-.filter__textarea::-moz-placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-}
+.filter__item--text {
+  width: 280px;
+  margin: 0 auto;
 
-.filter__input:-moz-placeholder,
-.filter__textarea:-moz-placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.filter__input:-ms-input-placeholder,
-.filter__textarea:-ms-input-placeholder {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.filter__wrapper--phone {
-  position: relative;
-}
-
-.filter__wrapper--email {
-  position: relative;
-}
-
-.filter__wrapper--phone::before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 220px;
-  width: 58px;
-  height: 58px;
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #e6e6e6;
-}
-
-.filter__wrapper--email::before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 220px;
-  width: 58px;
-  height: 58px;
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #e6e6e6;
-}
-
-.filter__item--visited {
   .filter__legend {
-    margin-left: auto;
-    margin-right: auto;
+    padding-bottom: 18px;
+  }
+
+  .filter__textarea {
+    display: block;
+    width: 278px;
+    height: 160px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    resize: vertical;
+    background-color: #f2f2f2;
+    border: none;
+  }
+
+  .filter__textarea:hover {
+    background-color: #e5e5e5;
+  }
+
+  .filter__textarea:focus {
+    background-color: #ffffff;
+    box-shadow: inset 4px 4px 0 #e5e5e5, inset -4px -4px 0 0 #e5e5e5;
+    outline: none;
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .filter {
@@ -208,24 +265,64 @@
     width: 648px;
   }
 
+  .filter__item {
+    border: none;
+  }
+
   .filter__legend {
     font-size: 21px;
     text-align: left;
   }
 
+  .filter__wrapper {
+    width: 100%;
+    margin: 0;
+    padding-top: 60px;
+    border: none;
+  }
+
+  .filter__wrapper--bio {
+    width: 265px;
+    margin-left: auto;
+  }
+
   .filter__item--bio {
     display: flex;
     flex-direction: column;
-    width: 270px;
+    width: 100%;
+    align-self: flex-start;
 
     .filter__legend {
-      padding-bottom: 75px;
+      margin-left: 0;
+      margin-right: 0;
+      padding-bottom: 58px;
+    }
+
+    .filter__input {
+      width: 180px;
+    }
+
+    .filter__input--name {
+      width: 216px;
     }
   }
 
-  .filter__wrapper--phone::before,
-  .filter__wrapper--email::before {
-    left: 586px;
+  .filter__wrapper--impression {
+    position: relative;
+    width: 360px;
+    order: -1;
+  }
+
+  .filter__wrapper--impression::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 210px;
+    right: -110px;
+    width: 295px;
+    height: 1px;
+    background-color: #dbdbdb;
+    transform: rotate(90deg);
   }
 
   .filter__item--impression {
@@ -240,33 +337,116 @@
     }
 
     .filter__legend {
-      padding-bottom: 75px;
+      margin-left: 0;
+      margin-right: 0;
+      padding-bottom: 53px;
     }
 
     .filter-list__label {
       padding-left: 0;
     }
+
+    .filter-option {
+      padding-top: 20px;
+      padding-bottom: 32px;
+    }
+  }
+
+  .filter__wrapper--contacts {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+
+  .filter__wrapper--contacts::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 0;
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  .filter__wrapper--contacts::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 525px;
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
   }
 
   .filter__item--contacts {
     width: 648px;
 
-    .filter__wrapper {
-      display: flex;
-      flex-wrap: wrap;
+    .filter__wrapper-email::before {
+      top: 34px;
     }
 
     .filter__legend {
+      padding-top: 30px;
+      padding-bottom: 23px;
       text-align: center;
     }
 
     .filter__input {
-      width: 586px;
+      width: 590px;
     }
+
+    .filter__label {
+      padding-bottom: 9px;
+    }
+
+    .filter__wrapper-phone {
+      padding-bottom: 20px;
+    }
+
+    .filter__wrapper-phone::before {
+      top: 34px;
+    }
+  }
+
+  .filter__wrapper--visited {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .filter__wrapper--visited::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 55px;
+    right: 0;
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  .filter__wrapper--visited::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 55px;
+    right: 525px;
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
   }
 
   .filter__item--visited {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 648px;
 
     .filter-list {
@@ -275,11 +455,13 @@
       flex-direction: row;
       width: 460px;
       padding-left: 177px;
-      padding-right: 93px;
     }
 
     .filter__legend {
       width: 290px;
+      margin-right: auto;
+      margin-left: auto;
+      align-self: center;
       padding-bottom: 55px;
       text-align: center;
     }
@@ -287,17 +469,50 @@
     .filter-option {
       display: block;
       width: 200px;
+      padding: 0;
+    }
+
+    .filter-option:first-child {
+      padding: 0;
     }
 
     .filter-option:first-child,
     .filter-option:nth-child(3n) {
-      margin-right: 50px;
+      margin-right: 55px;
     }
 
     .filter-option:first-child,
     .filter-option:nth-child(2n) {
-      margin-bottom: 25px;
+      padding-bottom: 63px;
     }
+  }
+
+  .filter__wrapper--text {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .filter__wrapper--text::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 11px;
+    right: 0;
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
+  }
+
+  .filter__wrapper--text::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 11px;
+    right: 525px;
+    width: 125px;
+    height: 1px;
+    background-color: #dbdbdb;
   }
 
   .filter__item--text {
@@ -306,13 +521,28 @@
     width: 648px;
 
     .filter__legend {
-      padding-bottom: 55px;
+      padding-bottom: 57px;
       text-align: center;
     }
 
     .filter__textarea {
       width: 648px;
     }
+  }
+
+  .filter__button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+
+  .filter__required {
+    display: block;
+    margin-left: auto;
+    padding-top: 75px;
+    color: #333333;
   }
 }
 
@@ -325,8 +555,14 @@
     display: none;
   }
 
-  .filter__item--bio {
+  .filter__wrapper--bio {
     width: 400px;
+    margin-left: auto;
+    padding-top: 40px;
+  }
+
+  .filter__item--bio {
+    width: 100%;
 
     .filter__input {
       width: 313px;
@@ -337,29 +573,82 @@
     }
   }
 
-  .filter__wrapper--phone::before {
-    left: 335px;
+  .filter__wrapper--impression {
+    padding-top: 40px;
   }
 
-  .filter__wrapper--email::before {
-    left: 498px;
+  .filter__wrapper--impression::before {
+    top: 195px;
+    right: -270px;
   }
 
   .filter__item--impression {
     order: -2;
     width: 560px;
+
+    .filter__legend {
+      padding-left: 80px;
+    }
+  }
+
+  .filter__wrapper--contacts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .filter__wrapper--contacts::before {
+    width: 285px;
+  }
+
+  .filter__wrapper--contacts::after {
+    width: 285px;
+    right: 680px;
   }
 
   .filter__item--contacts {
     flex-direction: row;
     width: 960px;
 
+    .page-container__contacts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .filter__wrapper-phone {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: auto;
+      margin-right: auto;
+    }
+
+    .filter__wrapper-phone::before {
+      top: 0;
+      right: 0;
+    }
+
+    .filter__wrapper-email {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: auto;
+      margin-left: auto;
+    }
+
+    .filter__wrapper-email::before {
+      top: 0;
+      right: 0;
+    }
+
     .filter__input {
       width: 257px;
     }
 
     .filter__legend {
-      padding-bottom: 70px;
+      padding-bottom: 73px;
     }
 
     .filter__label {
@@ -372,21 +661,37 @@
     }
   }
 
+  .filter__wrapper--visited {
+    padding-top: 10px;
+  }
+
+  .filter__wrapper--visited::before {
+    width: 285px;
+    top: 30px;
+  }
+
+  .filter__wrapper--visited::after {
+    width: 285px;
+    right: 680px;
+    top: 30px;
+  }
+
   .filter__item--visited {
     flex-direction: row;
     width: 960px;
 
     .filter-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       width: 100%;
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      padding-left: 80px;
     }
 
     .filter-option {
       margin: 0;
-      margin-right: 50px;
     }
 
     .filter-option:last-child {
@@ -394,14 +699,30 @@
     }
 
     .filter-list__label {
+      padding-left: 78px;
       margin: 0;
-      width: 150px;
+      box-sizing: border-box;
     }
 
     .filter-option:first-child,
     .filter-option:nth-child(3n) {
       margin-right: 0;
     }
+  }
+
+  .filter__wrapper--text {
+    padding-top: 0;
+  }
+
+  .filter__wrapper--text::before {
+    width: 285px;
+    top: 10px;
+  }
+
+  .filter__wrapper--text::after {
+    width: 285px;
+    right: 680px;
+    top: 10px;
   }
 
   .filter__item--text {

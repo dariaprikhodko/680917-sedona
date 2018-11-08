@@ -27,8 +27,40 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+}
+
+.mobile-show {
+  display: inline;
+}
+
+.tablet-show,
+.desktop-show,
+.desktop-show__only {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .tablet-show,
+  .desktop-show {
+    display: inline;
+  }
+
+  .desktop-show__only {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .desktop-show__only {
+    display: inline;
+  }
+
+  .tablet-show__only {
+    display: none;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),
