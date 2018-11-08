@@ -1,6 +1,6 @@
 .video-block {
   position: relative;
-  margin: 0 auto 92px auto;
+  margin: 0 auto 110px auto;
   padding: 0;
   width: 320px;
 }
@@ -24,6 +24,10 @@
   color: #333333;
 }
 
+.video-block__preview {
+  background-color: #9cb6b5;
+}
+
 .video-block__controls {
   position: absolute;
   bottom: -60px;
@@ -38,20 +42,18 @@
   padding-left: 20px;
   height: 45px;
   box-sizing: border-box;
-  background-color: #000000;
-  opacity: 0.3;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .video-block__scale {
   width: 236px;
   height: 2px;
-  background: gray;
-  opacity: 0.7;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .video-block__toggle--process {
   position: absolute;
-  top: 16px;
+  top: 18px;
   left: 60px;
   width: 10px;
   height: 10px;
@@ -77,15 +79,20 @@
 
 .video-block__toggle {
   border: none;
-  background-color: transparent;
 }
 
 .video-block__toggle--replay {
   margin-right: auto;
+  background-color: transparent;
 }
 
 .video-block__toggle--fullscreen {
   margin-left: 28px;
+  background-color: transparent;
+}
+
+.video-block__toggle--cc {
+  background-color: transparent;
 }
 
 .video-block__toggle:hover svg {
@@ -99,6 +106,7 @@
 @media (min-width: @tablet-width) {
   .video-block {
     width: 648px;
+    margin-bottom: 75px;
   }
 
   .video-block__title {
@@ -120,8 +128,7 @@
     width: 100%;
     height: 93px;
     bottom: 0;
-    background-color: #000000;
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.3);
     transform: translateX(-50%);
     left: 50%;
   }
@@ -129,15 +136,55 @@
   .video-block__bar {
     height: 100%;
     width: 100%;
+    padding-left: 93px;
+    padding-top: 45px;
+  }
+
+  .video-block__scale {
+    width: 390px;
+    height: 3px;
+  }
+
+  .video-block__toggle--process {
+    top: 40px;
+    left: 205px;
+  }
+
+  .video-block__toggle svg {
+    fill: #ffffff;
+  }
+
+  .video-block__buttons {
+    margin-top: -87px;
+    background-color: transparent;
+  }
+
+  .video-block__toggle--replay,
+  .video-block__toggle--fullscreen,
+  .video-block__toggle--cc {
+    z-index: 5;
+  }
+
+  .video-block__toggle:hover svg {
+    fill: #c2c2c2;
+  }
+
+  .video-block__toggle:active svg {
+    fill: #949494;
   }
 }
 
 @media (min-width: @desktop-width) {
   .video-block {
     width: 800px;
+    margin-bottom: 120px;
   }
 
   .video-block__preview {
     width: 800px;
+  }
+
+  .video-block__scale {
+    width: 542px;
   }
 }

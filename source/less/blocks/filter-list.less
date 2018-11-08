@@ -17,8 +17,8 @@
 .filter-list__radio + label::before {
   content: "";
   position: absolute;
-  left: -80px;
-  top: -10px;
+  left: -77px;
+  top: -16px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -28,8 +28,8 @@
 .filter-list__radio:checked + label::after {
   content: "";
   position: absolute;
-  left: -60px;
-  top: 10px;
+  left: -55px;
+  top: 4px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -39,8 +39,8 @@
 .filter-list__checkbox + label::before {
   content: "";
   position: absolute;
-  left: -80px;
-  top: 0;
+  left: -75px;
+  top: -14px;
   width: 55px;
   height: 55px;
   border-radius: 2px;
@@ -50,8 +50,8 @@
 .filter-list__checkbox:checked + label::after {
   content: "";
   position: absolute;
-  left: -80px;
-  top: 0;
+  left: -75px;
+  top: -14px;
   width: 55px;
   height: 55px;
   background-image: url("../img/icon-tick.svg");
@@ -80,6 +80,27 @@
 .filter-list__checkbox:focus + label::before,
 .filter-list__radio:focus + label::before {
   background-color: #d5d5d5;
+}
+
+.filter-list__checkbox:disabled + label,
+.filter-list__radio:disabled + label {
+  color: #999999;
+  cursor: auto;
+}
+
+.ffilter-list__checkbox:disabled + label::before,
+.filter-list__radio:disabled + label::before {
+  color: #e9e9e9;
+}
+
+.filter-list__checkbox:disabled + label::after,
+.filter-list__radio:disabled + label::after {
+  color: #e9e9e9;
+}
+
+.filter-list__radio:disabled + label:hover::before,
+.filter-list__checkbox:disabled + label:hover::before {
+  background-color: #f2f2f2;
 }
 
 @media (min-width: @tablet-width) {

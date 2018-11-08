@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -34,21 +35,21 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона" aria-label="логотип Седоны">
           </picture>
         </a>
-        <div class="background-photo__wrapper">
+        <div class="page-container__photo-wrapper">
           <div class="background-photo background-photo__mountains background-photo__mountains--inner">
-            <img class="background-photo__text background-photo__text--sedona" src="img/text-sedona.svg" alt="Приветственный текст">
+            <img class="background-photo__text background-photo__text--sedona" src="img/text-sedona.svg" width="229" height="39" alt="Приветственный текст">
           </div>
         </div>
       </header>
       <main class="page-main page-main__inner-page">
         <h1 class="page-main__title">Оставьте свой отзыв</h1>
-        <p class="page-main__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <p class="page-main__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
         <form class="filter" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="filter__item filter__item--bio">
-            <div class="filter__wrapper">
+          <div class="filter__wrapper filter__wrapper--bio">
+            <fieldset class="filter__item filter__item--bio">
               <legend class="filter__legend">Представьтесь:</legend>
               <div class="filter__line">
                 <label class="filter__label" for="name">Имя*:</label>
@@ -62,27 +63,27 @@
                 <label class="filter__label" for="patronymic">Отчество:</label>
                 <input class="filter__input" id="patronymic" type="text" name="name" value="" placeholder="Александрович">
               </div>
-            </div>
-          </fieldset>
-          <fieldset class="filter__item filter__item--contacts">
-            <div class="filter__wrapper">
+            </fieldset>
+          </div>
+          <div class="filter__wrapper filter__wrapper--contacts">
+            <fieldset class="filter__item filter__item--contacts">
               <legend class="filter__legend">Контактная информация:</legend>
-              <div class="wrap-wrap">
-                <div class="filter__wrapper--phone">
+              <div class="page-container__contacts-wrapper">
+                <div class="filter__wrapper-phone">
                   <label class="filter__label" for="phone">
                     <span class="filter__hidedesktop">Контактный</span> телефон*:
                   </label>
                   <input class="filter__input filter__input--phone" id="phone" type="tel" name="phone-number" value="" placeholder="Введите телефон" required>
                 </div>
-                <div class="filter__wrapper--email">
+                <div class="filter__wrapper-email">
                   <label class="filter__label filter__label--email" for="email">Электронная почта*:</label>
                   <input class="filter__input filter__input--message" id="email" type="email" name="email-adress" value="" placeholder="Введите e-mail" required>
                 </div>
               </div>
-            </div>
-          </fieldset>
-          <fieldset class="filter__item filter__item--impression">
-            <div class="filter__wrapper">
+            </fieldset>
+          </div>
+          <div class="filter__wrapper filter__wrapper--impression">
+            <fieldset class="filter__item filter__item--impression">
               <legend class="filter__legend">Ваше общее впечатление:</legend>
               <ul class="filter-list">
                 <li class="filter-option">
@@ -98,10 +99,10 @@
                   <label class="filter-list__label" for="no-idea">Затрудняюсь ответить</label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
-          <fieldset class="filter__item filter__item--visited">
-            <div class="filter__wrapper">
+            </fieldset>
+          </div>
+          <div class="filter__wrapper filter__wrapper--visited">
+            <fieldset class="filter__item filter__item--visited">
               <legend class="filter__legend">Посещенные достопримечательности:</legend>
               <ul class="filter-list">
                 <li class="filter-option">
@@ -121,22 +122,25 @@
                   <label class="filter-list__label" for="filter-cliff">Красные скалы</label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
-          <fieldset class="filter__item filter__item--text">
-            <div class="filter__wrapper">
+            </fieldset>
+          </div>
+          <div class="filter__wrapper filter__wrapper--text">
+            <fieldset class="filter__item filter__item--text">
               <label class="filter__legend filter__legend--label" for="text">Опишите свои эмоции:</label>
               <textarea class="filter__textarea" rows="6" id="text" placeholder="Опишите подробно все свои восторги"></textarea>
-            </div>
-          </fieldset>
-          <button type="submit" class="filter__button button button--feedback">Отправить отзыв</button>
+            </fieldset>
+          </div>
+          <div class="filter__button-wrapper">
+            <button type="submit" class="filter__button button button--feedback">Отправить отзыв</button>
+            <div class="filter__required tablet-show desktop-show">* – обязательные поля</div>
+          </div>
         </form>
       </main>
       <footer class="page-footer">
         <div class="hashtag">#Visitsedona</div>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Твиттер</span>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="Ссылка на Твиттер HTML Academy"><span class="visually-hidden">Твиттер</span>
               <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
                 <g id="W6EeEF_1_">
                   <g>
@@ -147,14 +151,14 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Ссылка на Фэйсбук HTML Academy"><span class="visually-hidden">Фейсбук</span>
               <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
                 <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Ютуб</span>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Ссылка на Ютуб-канал HTML Academy"><span class="visually-hidden">Ютуб</span>
               <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
                 <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
               </svg>
@@ -163,7 +167,7 @@
         </ul>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Иконка</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на сайт HTML Academy"><span class="visually-hidden">Иконка</span>
             <svg class="copyright__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
             </svg>

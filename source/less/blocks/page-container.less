@@ -1,7 +1,24 @@
+.page-container__photo-wrapper {
+  margin: 0 auto;
+  width: 320px;
+  background-color: @light-blue;
+}
+
+@media (min-width: @tablet-width) {
+  .page-container__photo-wrapper {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .page-container {
     width: 1200px;
     margin: 0 auto;
     box-shadow: 0 -5px 9px 2px #dbdbdb;
+  }
+
+  .page-container__photo-wrapper {
+    width: 1200px;
   }
 }

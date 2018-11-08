@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -34,10 +35,10 @@
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона" aria-label="Логотип Седоны">
           </picture>
         </a>
-        <div class="background-photo__wrapper">
+        <div class="page-container__photo-wrapper">
           <div class="background-photo background-photo__mountains">
             <img class="background-photo__text background-photo__text--welcome" src="img/text-sedona-index.svg" alt="Приветственный текст">
           </div>
@@ -53,7 +54,7 @@
                 <div class="advantages-list__item advantages-list__item--small-town">
                   <h3 class="advantages-list__title">Настоящий городок</h3>
                   <span class="advantages-list__number">– №1 –</span>
-                  <p class="advantages-list__description">Седона - не аттракцион для&nbsp;туристов, там<br> течет своя жизнь</p>
+                  <p class="advantages-list__description">Седона - не аттракцион для&nbsp;туристов, там<br class="tablet-show tablet-show__only">&nbsp;течет своя жизнь</p>
                 </div>
                 <div class="background-photo background-photo__town">
                   <picture>
@@ -81,14 +82,14 @@
                     </g>
                   </svg>
                   <h4 class="lifestyle-list__title">Жилье</h4>
-                  <p class="lifestyle-list__description">Рекомендуем пожить<br> в настоящем мотеле,<br> все как в кино!</p>
+                  <p class="lifestyle-list__description">Рекомендуем пожить<br class="tablet-show tablet-show__only"> в настоящем мотеле,<br class="tablet-show tablet-show__only"> все как в кино!</p>
                 </li>
                 <li class="lifestyle-list__item lifestyle-list__item--souvenirs">
                   <svg class="lifestyle-list__icon-gift" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="75.084px" viewBox="0 0 63 75.084" enable-background="new 0 0 63 75.084" xml:space="preserve">
                     <path d="M60.165,22.23h-0.103H35.758c13.604-6.815,14.688-11.115,14.188-13.52c-1.145-3.916-5.604-6.938-9.848-5.341 c-5.484,2.063-7.029,10.262-8.514,16.19C29.69,13.561,27.858,5.91,23.573,2.034c-1.242-1.125-3.049-2.237-5.676-2.003 c-3.965,0.352-9.652,5.317-7.344,10.849c2.217,5.313,9.539,8.67,14.354,11.35H2.834C1.275,22.23,0,23.506,0,25.065V36.25 c0,1.559,1.275,2.834,2.835,2.834h0.27v35.999h56.958V39.084h0.104c1.561,0,2.835-1.275,2.835-2.834V25.065 C63,23.506,61.725,22.23,60.165,22.23z M41.766,5.873c2.07-0.306,4.907,1.283,5.176,3.171c0.386,2.723-3.349,5.192-5.008,6.343 c-2.484,1.723-4.853,2.611-7.178,4.006C35.628,15.748,37.268,6.539,41.766,5.873z M19.232,15.721 c-2.19-1.467-6.444-4.378-6.342-7.678c0.11-3.552,5.655-6.491,8.68-3.839c3.797,3.331,5.625,10.972,7.01,16.357 C25.381,19.042,22.35,17.808,19.232,15.721z M25.114,72.147H6.042V39.084h19.072V72.147z M25.114,36.084H3V25.23h22.114V36.084z  M35.115,72.146h-7.063V25.23h7.063V72.146z M57.125,72.147H38.053V39.084h19.072V72.147z M60,36.084H38.053V25.23H60V36.084z"/>
                   </svg>
                   <h4 class="lifestyle-list__title">Сувениры</h4>
-                  <p class="lifestyle-list__description">Не только китайского,<br class="desktop-show"> но и местного производства!</p>
+                  <p class="lifestyle-list__description">Не только китайского,<br class="tablet-show desktop-show"> но и местного производства!</p>
                 </li>
                 <li class="lifestyle-list__item lifestyle-list__item--food">
                   <svg class="lifestyle-list__icon-burger" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76.166px" height="68.959px" viewBox="0 0 76.166 68.959" enable-background="new 0 0 76.166 68.959" xml:space="preserve">
@@ -102,7 +103,7 @@
                     </g>
                   </svg>
                   <h4 class="lifestyle-list__title">Еда</h4>
-                  <p class="lifestyle-list__description">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+                  <p class="lifestyle-list__description">Всегда заказывайте фирменный бургер,<br class="tablet-show"> вы не разочаруетесь!</p>
                 </li>
               </ul>
             </div>
@@ -129,25 +130,25 @@
               <div class="advantages-list__item advantages-list__item--info advantages-list__item--road">
                 <h3 class="advantages-list__title">Красивая дорога</h3>
                 <span class="advantages-list__number">– №4 –</span>
-                <p class="advantages-list__description">Ехать в Седону из<br> Лас-Вегаса совсем не&nbsp;скучно!</p>
+                <p class="advantages-list__description">Ехать в Седону из<br class="tablet-show tablet-show__only"> Лас-Вегаса совсем<br class="tablet-show">&nbsp;не&nbsp;скучно!</p>
               </div>
               <div class="advantages-list__item advantages-list__item--info advantages-list__item--no-tourists">
                 <h3 class="advantages-list__title">Мало туристов</h3>
                 <span class="advantages-list__number">– №5 –</span>
-                <p class="advantages-list__description">Большинство едет в Гранд Каньон и толпится там</p>
+                <p class="advantages-list__description">Большинство едет в Гранд Каньон и<br class="tablet-show">&nbsp;толпится там</p>
               </div>
             </div>
           </div>
         </section>
         <section class="order-form">
           <h3 class="order-form__title">Заинтересовались?</h3>
-          <p class="order-form__description">Укажите предполагаемые даты поездки,<br class="desktop-show"> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="order-form__description">Укажите предполагаемые даты поездки,<br class="tablet-show desktop-show"> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="order-form__button button button--find" href="#">Найти гостиницу</a>
         </section>
         <section class="contacts">
           <div class="contacts__map-wrapper">
             <div class="contacts__map">
-              <iframe class="contacts__picture" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae59e4842b53b0be484be5ecf7b4bdf174eb3a4a82c74ea06dba4ad16553cb5e2&amp;source=constructor" width="320" height="350"></iframe>
+              <iframe class="contacts__picture" aria-label="Интерактивная карта" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae59e4842b53b0be484be5ecf7b4bdf174eb3a4a82c74ea06dba4ad16553cb5e2&amp;source=constructor" width="320" height="350"></iframe>
             </div>
           </div>
         </section>
@@ -156,7 +157,7 @@
         <div class="hashtag">#Visitsedona</div>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Твиттер</span>
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" aria-label="Ссылка на Твиттер HTML Academy"><span class="visually-hidden">Твиттер</span>
               <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
                 <g id="W6EeEF_1_">
                   <g>
@@ -167,14 +168,14 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Ссылка на Фэйсбук HTML Academy"><span class="visually-hidden">Фейсбук</span>
               <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
                 <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Ютуб</span>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy" aria-label="Ссылка на Ютуб-канал HTML Academy"><span class="visually-hidden">Ютуб</span>
               <svg class="social__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
                 <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
               </svg>
@@ -183,7 +184,7 @@
         </ul>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Иконка</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на сайт HTML Academy"><span class="visually-hidden">Иконка</span>
             <svg class="copyright__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
               <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
             </svg>
