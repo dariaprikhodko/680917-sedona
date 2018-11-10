@@ -26,9 +26,9 @@ gulp.task("css", function () {
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
-     pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
-     pipe(server.stream());
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("server", function () {
@@ -69,12 +69,6 @@ gulp.task("sprite", function () {
    }))
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-  .pipe(posthtml())
-  .pipe(gulp.dest("source"));
 });
 
 gulp.task("html", function () {

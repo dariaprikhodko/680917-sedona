@@ -98,6 +98,14 @@
     padding-right: 15px;
   }
 
+  .photo-list__item:nth-child(3n) {
+    background-color: #eaeaea;
+
+    .photo-list__button {
+      background-color: inherit;
+    }
+  }
+
   .photo-list__button {
     padding: 0;
     width: 40px;
@@ -125,6 +133,8 @@
   }
 
   .photo-list__desktop-wrap {
+    position: relative;
+    z-index: 1;
     margin-top: -83px;
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -135,11 +145,8 @@
     opacity: 1;
   }
 
-  .photo-list__like path {
-    fill: #ffffff;
-  }
-
   .photo-list__like {
+    fill: #ffffff;
     opacity: 1;
   }
 
