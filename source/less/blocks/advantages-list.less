@@ -42,7 +42,8 @@
 
 .advantages-list__description {
   display: block;
-  margin: 0;
+  width: 275px;
+  margin: 0 auto;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -63,6 +64,16 @@
 
 .advantages-list__item--info:last-child {
   border-bottom: none;
+
+  .advantages-list__description {
+    width: 255px;
+  }
+}
+
+.advantages-list__item--road {
+  .advantages-list__description {
+    width: 220px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -85,6 +96,7 @@
     }
 
     .advantages-list__description {
+      width: 165px;
       padding-bottom: 45px;
     }
   }
@@ -92,7 +104,7 @@
   .advantages-list__title {
     margin: 0 auto;
     padding-top: 45px;
-    width: 135px;
+    width: 151px;
     font-size: 21px;
   }
 
@@ -103,7 +115,7 @@
   .advantages-list__description {
     margin: 0 auto;
     padding-bottom: 45px;
-    width: 175px;
+    width: 172px;
   }
 
   .advantages-list__wrapper {
@@ -116,6 +128,18 @@
 
     .advantages-list__title {
       padding-top: 45px;
+    }
+  }
+
+  .advantages-list__item--road {
+    .advantages-list__description {
+      width: 145px;
+    }
+  }
+
+  .advantages-list__item--info:last-child {
+    .advantages-list__description {
+      width: 165px;
     }
   }
 }
@@ -148,6 +172,10 @@
     .advantages-list__title {
       padding-top: 54px;
     }
+
+    .advantages-list__description {
+      width: 220px;
+    }
   }
 
   .advantages-list__item--info {
@@ -156,7 +184,20 @@
     }
 
     .advantages-list__description {
+      width: 290px;
       padding-bottom: 65px;
+    }
+  }
+
+  .advantages-list__item--road {
+    .advantages-list__description {
+      width: 270px;
+    }
+  }
+
+  .advantages-list__item--info:last-child {
+    .advantages-list__description {
+      width: 290px;
     }
   }
 }

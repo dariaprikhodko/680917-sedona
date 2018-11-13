@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
@@ -42,8 +44,10 @@
           </picture>
         </a>
         <div class="page-container__photo-wrapper">
-          <div class="background-photo background-photo__mountains">
-            <img class="background-photo__text background-photo__text--welcome" src="img/text-sedona-index.svg" alt="Приветственный текст">
+          <div class="background-photo">
+            <div class="background-photo__mountains">
+              <img class="background-photo__text background-photo__text--welcome" src="img/text-sedona-index.svg" alt="Приветственный текст">
+            </div>
           </div>
         </div>
       </header>
@@ -57,14 +61,19 @@
                 <div class="advantages-list__item advantages-list__item--small-town">
                   <h3 class="advantages-list__title">Настоящий городок</h3>
                   <span class="advantages-list__number">– №1 –</span>
-                  <p class="advantages-list__description">Седона - не аттракцион для&nbsp;туристов, там<br class="tablet-show tablet-show__only">&nbsp;течет своя жизнь</p>
+                  <p class="advantages-list__description">Седона - не аттракцион для туристов, там течет&nbsp;своя жизнь</p>
                 </div>
-                <div class="background-photo background-photo__town">
-                  <picture>
-                    <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-                    <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Фото городка Седона">
-                  </picture>
+                <div class="background-photo">
+                  <div class="background-photo__town">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+                      <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Фото городка Седона">
+                    </picture>
+                  </div>
                 </div>
               </div>
               <ul class="lifestyle-list">
@@ -86,7 +95,7 @@
                     <use xlink:href="#icon-house"></use>
                   </svg>
                   <h4 class="lifestyle-list__title">Жилье</h4>
-                  <p class="lifestyle-list__description">Рекомендуем пожить<br class="tablet-show tablet-show__only"> в настоящем мотеле,<br class="tablet-show tablet-show__only"> все как в кино!</p>
+                  <p class="lifestyle-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
                 <li class="lifestyle-list__item lifestyle-list__item--souvenirs">
                   <svg class="lifestyle-list__icon-gift" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="75.084px" viewBox="0 0 63 75.084" enable-background="new 0 0 63 75.084" xml:space="preserve">
@@ -94,7 +103,7 @@
                     <use xlink:href="#icon-gift"></use>
                   </svg>
                   <h4 class="lifestyle-list__title">Сувениры</h4>
-                  <p class="lifestyle-list__description">Не только китайского,<br class="tablet-show desktop-show"> но и местного производства!</p>
+                  <p class="lifestyle-list__description">Не только китайского,<br class="tablet-desktop-show"> но и местного производства!</p>
                 </li>
                 <li class="lifestyle-list__item lifestyle-list__item--food">
                   <svg class="lifestyle-list__icon-burger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76.166px" height="68.959px" viewBox="0 0 76.166 68.959" enable-background="new 0 0 76.166 68.959" xml:space="preserve">
@@ -109,22 +118,27 @@
                     <use xlink:href="#icon-burger"></use>
                   </svg>
                   <h4 class="lifestyle-list__title">Еда</h4>
-                  <p class="lifestyle-list__description">Всегда заказывайте фирменный бургер,<br class="tablet-show"> вы не разочаруетесь!</p>
+                  <p class="lifestyle-list__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
               </ul>
             </div>
             <div class="advantages-list__wrapper">
               <div class="advantages-list__item advantages-list__item--bridge">
-                <h3 class="advantages-list__title">Там есть мост&nbsp;дьявола</h3>
+                <h3 class="advantages-list__title">Там есть мост дьявола</h3>
                 <span class="advantages-list__number">– №2 –</span>
-                <p class="advantages-list__description">Да, по нему можно пройти!<br class="desktop-show__only"> Если вы осмелитесь, конечно</p>
+                <p class="advantages-list__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <div class="background-photo background-photo__bridge">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-                  <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото городка Седона">
-                </picture>
+              <div class="background-photo">
+                <div class="background-photo__bridge">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                    <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото городка Седона">
+                  </picture>
+                </div>
               </div>
             </div>
             <div class="advantages-list__wrapper">
@@ -136,19 +150,19 @@
               <div class="advantages-list__item advantages-list__item--info advantages-list__item--road">
                 <h3 class="advantages-list__title">Красивая дорога</h3>
                 <span class="advantages-list__number">– №4 –</span>
-                <p class="advantages-list__description">Ехать в Седону из<br class="tablet-show tablet-show__only"> Лас-Вегаса совсем<br class="tablet-show">&nbsp;не&nbsp;скучно!</p>
+                <p class="advantages-list__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
               <div class="advantages-list__item advantages-list__item--info advantages-list__item--no-tourists">
                 <h3 class="advantages-list__title">Мало туристов</h3>
                 <span class="advantages-list__number">– №5 –</span>
-                <p class="advantages-list__description">Большинство едет в Гранд Каньон и<br class="tablet-show">&nbsp;толпится там</p>
+                <p class="advantages-list__description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </div>
           </div>
         </section>
         <section class="order-form">
           <h3 class="order-form__title">Заинтересовались?</h3>
-          <p class="order-form__description">Укажите предполагаемые даты поездки,<br class="tablet-show desktop-show"> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="order-form__description">Укажите предполагаемые даты поездки,<br class="tablet-desktop-show"> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="order-form__button button button--find" href="#">Найти гостиницу</a>
         </section>
         <section class="contacts">

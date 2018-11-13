@@ -58,6 +58,7 @@
 .photo-list__like {
   width: 23px;
   height: 21px;
+  align-self: flex-start;
   opacity: 0.3;
 }
 
@@ -91,11 +92,20 @@
 
   .photo-list__item--fullscreen {
     width: 648px;
+
+    .photo-list__button {
+      padding-left: 10px;
+    }
   }
 
   .photo-list__wrapper--like {
     margin-left: auto;
-    padding-right: 15px;
+    padding-right: 19px;
+  }
+
+  .photo-list__like {
+    align-self: center;
+    margin-right: -5px;
   }
 
   .photo-list__item:nth-child(3n) {
@@ -108,7 +118,7 @@
 
   .photo-list__button {
     padding: 0;
-    width: 40px;
+    width: 50px;
     background-color: #f2f2f2;
   }
 

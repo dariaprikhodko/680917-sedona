@@ -11,21 +11,24 @@
   background-color: @light-blue;
 
   .main-nav__list {
-    position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
   }
+}
 
-  .main-nav__list::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 8px;
-    width: 100%;
-    box-shadow: inset 0 -3px 5px -2px rgba(0, 0, 0, 0.5);
-  }
+.main-nav--opened .main-nav__list {
+  position: relative;
+}
+
+.main-nav--opened .main-nav__list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  width: 100%;
+  box-shadow: inset 0 -3px 5px -2px rgba(0, 0, 0, 0.5);
 }
 
 .main-nav__toggle {
@@ -112,6 +115,14 @@
 
   .main-nav--closed .main-nav__toggle {
     background-color: #ffffff;
+  }
+
+  .main-nav--nojs {
+    margin-bottom: 54px;
+  }
+
+  .main-nav--nojs + .page-header__logo {
+    top: 222px;
   }
 
   .main-nav--nojs .main-nav__toggle {

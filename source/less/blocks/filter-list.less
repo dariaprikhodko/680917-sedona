@@ -107,16 +107,24 @@
   .filter-list {
     width: 460px;
   }
+
+  .filter-list__checkbox + label::before {
+    left: -80px;
+  }
+
+  .filter-list__checkbox:checked + label::after {
+    left: -80px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .filter-list__checkbox + label::before {
-    left: 0;
-    top: -10px;
+    left: -4px;
+    top: -13px;
   }
 
   .filter-list__checkbox:checked + label::after {
-    left: 0;
-    top: -10px;
+    left: -4px;
+    top: -13px;
   }
 }

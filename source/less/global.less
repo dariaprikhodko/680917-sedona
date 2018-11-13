@@ -4,6 +4,7 @@
     url("../fonts/ptsans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
     url("../fonts/ptsansbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -32,24 +34,13 @@ img {
   height: auto;
 }
 
-.mobile-show {
-  display: inline;
-}
-
-.tablet-show,
-.desktop-show,
-.desktop-show__only {
+.tablet-desktop-show {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
-  .tablet-show,
-  .desktop-show {
+  .tablet-desktop-show {
     display: inline;
-  }
-
-  .desktop-show__only {
-    display: none;
   }
 }
 
@@ -58,12 +49,8 @@ img {
     background-color: #f2f2f2;
   }
 
-  .desktop-show__only {
+  .tablet-desktop-show {
     display: inline;
-  }
-
-  .tablet-show__only {
-    display: none;
   }
 }
 
