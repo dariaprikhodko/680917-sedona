@@ -1,5 +1,5 @@
 .contacts {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -10,6 +10,7 @@
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.jpg");
@@ -17,13 +18,14 @@
 }
 
 .contacts__picture {
+  width: 100%;
   display: block;
   border: none;
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
-    width: 768px;
+    width: 100%;
     margin-bottom: 40px;
   }
 
