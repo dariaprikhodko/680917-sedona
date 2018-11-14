@@ -6,6 +6,7 @@
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, 50% 0%;
+  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -41,10 +42,14 @@
 }
 
 .background-photo__town {
+  width: 320px;
+  margin: 0 auto;
   background-color: #5d6056;
 }
 
 .background-photo__bridge {
+  width: 320px;
+  margin: 0 auto;
   background-color: #e89683;
 }
 
@@ -52,6 +57,7 @@
   .background-photo__mountains {
     padding-top: 80px;
     padding-bottom: 90px;
+    background-size: 100%, cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -72,6 +78,14 @@
   .background-photo__text--sedona {
     width: 458px;
     height: 78px;
+  }
+
+  .background-photo__town {
+    width: auto;
+  }
+
+  .background-photo__bridge {
+    width: auto;
   }
 
   .background-photo__town img {
